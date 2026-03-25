@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Applicants</h2>
+
+<table class="table table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Job Role</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for app in applications %}
+    <tr>
+      <td>{{ app[0] }}</td>
+      <td>{{ app[1] }}</td>
+      <td>
+        {% if app[2] == 'Applied' %}
+        <span class="badge bg-primary">Applied</span>
+        {% elif app[2] == 'Shortlisted' %}
+        <span class="badge bg-warning text-dark">Shortlisted</span>
+        {% elif app[2] == 'Selected' %}
+        <span class="badge bg-success">Selected</span>
+        {% elif app[2] == 'Rejected' %}
+        <span class="badge bg-danger">Rejected</span>
+        {% else %}
+        <span class="badge bg-secondary">{{ app[2] }}</span>
+        {% endif %}
+      </td>
+      <td>
+        <a href="/update_status/{{ app[3] }}/Shortlisted" class="btn btn-warning btn-sm">Shortlist</a>
+        <a href="/update_status/{{ app[3] }}/Selected" class="btn btn-success btn-sm">Select</a>
+        <a href="/update_status/{{ app[3] }}/Rejected" class="btn btn-danger btn-sm">Reject</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="/view_drives_admin" class="btn btn-secondary">Back</a>
+
+{% endblock %}

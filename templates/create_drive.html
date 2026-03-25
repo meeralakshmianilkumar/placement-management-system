@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 class="mb-4">Create Placement Drive</h2>
+
+        <form action="/create_drive" method="post">
+          <div class="mb-3">
+            <label class="form-label">Company ID</label>
+            <input type="text" name="company_id" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Job Role</label>
+            <input type="text" name="job_role" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Package</label>
+            <input type="text" name="package" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Minimum CGPA</label>
+            <input type="text" name="minimum_cgpa" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Required Skill</label>
+            <input type="text" name="required_skill" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Drive Date</label>
+            <input type="date" name="drive_date" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Create Drive</button>
+          <a href="/officer" class="btn btn-secondary">Back</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

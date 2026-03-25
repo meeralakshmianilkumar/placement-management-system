@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Placement Officer Dashboard</h2>
+
+<div class="row mb-4">
+
+  <div class="col-md-3">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-body">
+        <h5>Total Students</h5>
+        <h3>{{ stats[0] }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-white bg-success mb-3">
+      <div class="card-body">
+        <h5>Total Companies</h5>
+        <h3>{{ stats[1] }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-white bg-warning mb-3">
+      <div class="card-body">
+        <h5>Total Drives</h5>
+        <h3>{{ stats[2] }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card text-white bg-danger mb-3">
+      <div class="card-body">
+        <h5>Total Applications</h5>
+        <h3>{{ stats[3] }}</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="list-group">
+
+  <a href="/add_company" class="list-group-item list-group-item-action">
+    ➕ Add Company
+  </a>
+
+  <a href="/create_drive" class="list-group-item list-group-item-action">
+    📅 Create Placement Drive
+  </a>
+
+  <a href="/view_drives_admin" class="list-group-item list-group-item-action">
+    📋 View Drives & Applicants
+  </a>
+
+</div>
+
+{% endblock %}

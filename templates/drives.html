@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Placement Drives</h2>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-dark">
+<tr>
+<th>Job Role</th>
+<th>Package</th>
+<th>Min CGPA</th>
+<th>Date</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for drive in drives %}
+
+<tr>
+<td>{{ drive[1] }}</td>
+<td>{{ drive[2] }}</td>
+<td>{{ drive[3] }}</td>
+<td>{{ drive[4] }}</td>
+
+<td>
+{% if drive[5] == 'Eligible' %}
+<span class="badge bg-success">Eligible</span>
+{% else %}
+<span class="badge bg-danger">Not Eligible</span>
+{% endif %}
+</td>
+
+<td>
+{% if drive[5] == 'Eligible' %}
+<a href="/apply/{{ drive[0] }}" class="btn btn-primary btn-sm">Apply</a>
+{% else %}
+<button class="btn btn-secondary btn-sm" disabled>Not Eligible</button>
+{% endif %}
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}

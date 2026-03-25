@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 class="mb-4">Add Company</h2>
+
+        <form action="/add_company" method="post">
+          <div class="mb-3">
+            <label class="form-label">Company Name</label>
+            <input type="text" name="company_name" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Industry Type</label>
+            <input type="text" name="industry_type" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Location</label>
+            <input type="text" name="location" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Contact Email</label>
+            <input type="email" name="contact_email" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-success">Add Company</button>
+          <a href="/officer" class="btn btn-secondary">Back</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

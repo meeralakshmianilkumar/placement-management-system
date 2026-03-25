@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Eligible Students</h2>
+
+<table class="table table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Department</th>
+      <th>CGPA</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student in students %}
+    <tr>
+      <td>{{ student[0] }}</td>
+      <td>{{ student[1] }}</td>
+      <td>{{ student[2] }}</td>
+      <td>{{ student[3] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="/view_drives_admin" class="btn btn-secondary">Back</a>
+
+{% endblock %}

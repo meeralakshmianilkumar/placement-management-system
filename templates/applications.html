@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">My Applications</h2>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-dark">
+<tr>
+<th>Company</th>
+<th>Job Role</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for app in applications %}
+
+<tr>
+<td>{{ app[0] }}</td>
+<td>{{ app[1] }}</td>
+
+<td>
+{% if app[2] == 'Applied' %}
+<span class="badge bg-primary">Applied</span>
+
+{% elif app[2] == 'Shortlisted' %}
+<span class="badge bg-warning text-dark">Shortlisted</span>
+
+{% elif app[2] == 'Selected' %}
+<span class="badge bg-success">Selected</span>
+
+{% elif app[2] == 'Rejected' %}
+<span class="badge bg-danger">Rejected</span>
+
+{% endif %}
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}

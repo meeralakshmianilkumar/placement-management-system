@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-5">
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 class="mb-4">Add Skill</h2>
+
+        <form action="/skills" method="post">
+          <div class="mb-3">
+            <label class="form-label">Skill</label>
+            <input type="text" name="skill" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-success">Add Skill</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-7">
+    <div class="card shadow">
+      <div class="card-body">
+        <h3 class="mb-3">My Skills</h3>
+        <ul class="list-group">
+          {% for s in skills %}
+          <li class="list-group-item">{{ s[0] }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 class="mb-4">Update Profile</h2>
+
+        <form action="/profile" method="post">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" value="{{ student[0] }}" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Roll No</label>
+            <input type="text" name="roll_no" value="{{ student[1] }}" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Department</label>
+            <input type="text" name="department" value="{{ student[2] }}" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">CGPA</label>
+            <input type="text" name="cgpa" value="{{ student[3] }}" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" value="{{ student[4] }}" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Update Profile</button>
+          <a href="/student" class="btn btn-secondary">Back</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -2,63 +2,84 @@
 
 {% block content %}
 
-<h2 class="mb-4">Placement Officer Dashboard</h2>
+<!-- ===================== TOP BAR ===================== -->
 
-<div class="row mb-4">
+
+</div>
+
+<!-- ===================== STATS ===================== -->
+<div class="row g-4 mb-4">
 
   <div class="col-md-3">
-    <div class="card text-white bg-primary mb-3">
-      <div class="card-body">
-        <h5>Total Students</h5>
-        <h3>{{ stats[0] }}</h3>
+    <div class="card text-white bg-primary shadow">
+      <div class="card-body text-center">
+        <h6>Total Students</h6>
+        <h2>{{ stats[0] }}</h2>
       </div>
     </div>
   </div>
 
   <div class="col-md-3">
-    <div class="card text-white bg-success mb-3">
-      <div class="card-body">
-        <h5>Total Companies</h5>
-        <h3>{{ stats[1] }}</h3>
+    <div class="card text-white bg-success shadow">
+      <div class="card-body text-center">
+        <h6>Total Companies</h6>
+        <h2>{{ stats[1] }}</h2>
       </div>
     </div>
   </div>
 
   <div class="col-md-3">
-    <div class="card text-white bg-warning mb-3">
-      <div class="card-body">
-        <h5>Total Drives</h5>
-        <h3>{{ stats[2] }}</h3>
+    <div class="card text-white bg-warning shadow">
+      <div class="card-body text-center">
+        <h6>Total Applications</h6>
+        <h2>{{ stats[3] }}</h2>
       </div>
     </div>
   </div>
 
   <div class="col-md-3">
-    <div class="card text-white bg-danger mb-3">
-      <div class="card-body">
-        <h5>Total Applications</h5>
-        <h3>{{ stats[3] }}</h3>
+    <div class="card text-white bg-danger shadow">
+      <div class="card-body text-center">
+        <h6>Total Drives</h6>
+        <h2>{{ stats[2] }}</h2>
       </div>
     </div>
   </div>
 
 </div>
 
-<hr>
+<!-- ===================== ACTION BUTTONS ===================== -->
+<div class="row g-4">
 
-<div class="list-group">
+  <div class="col-md-4">
+    <a href="/view_companies" class="btn btn-outline-primary w-100 p-3 shadow-sm">
+      🏢 View Companies
+    </a>
+  </div>
 
-  <a href="/add_company" class="list-group-item list-group-item-action">
-    ➕ Add Company
-  </a>
+  <div class="col-md-4">
+    <a href="/view_students" class="btn btn-outline-success w-100 p-3 shadow-sm">
+      👨‍🎓 View Students
+    </a>
+  </div>
 
-  <a href="/create_drive" class="list-group-item list-group-item-action">
-    📅 Create Placement Drive
-  </a>
+  <div class="col-md-4">
+    <a href="/add_company" class="btn btn-outline-warning w-100 p-3 shadow-sm">
+      ➕ Add Company
+    </a>
+  </div>
 
-  <a href="/view_drives_admin" class="list-group-item list-group-item-action">
-    📋 View Drives & Applicants
-  </a>
+  <div class="col-md-4">
+    <a href="/create_drive" class="btn btn-outline-danger w-100 p-3 shadow-sm">
+      📅 Create Drive
+    </a>
+  </div>
+
+  <div class="col-md-4">
+    <a href="/view_drives_admin" class="btn btn-outline-dark w-100 p-3 shadow-sm">
+      📊 View Drives & Applicants
+    </a>
+  </div>
 
 </div>
 

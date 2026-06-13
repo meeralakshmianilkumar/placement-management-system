@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Companies</h2>
+
+<table class="table table-bordered table-hover">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Industry</th>
+<th>Location</th>
+<th>Email</th>
+<th>Delete</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for c in companies %}
+
+<tr>
+<td>{{ c[0] }}</td>
+<td>{{ c[1] }}</td>
+<td>{{ c[2] }}</td>
+<td>{{ c[3] }}</td>
+<td>{{ c[4] }}</td>
+<td>
+  <a href="/delete_company/{{ c[0] }}"
+     class="btn btn-danger btn-sm"
+     onclick="return confirm('Delete this company?');">
+     Delete
+  </a>
+</td>
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}

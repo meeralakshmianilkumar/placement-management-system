@@ -1,39 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Student Registration</title>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block content %}
 
-<h2>Student Registration</h2>
+<div class="row justify-content-center">
+  <div class="col-md-6">
 
-<form action="/register" method="post">
+    <div class="card shadow">
+      <div class="card-body">
 
-Username:<br>
-<input type="text" name="username"><br><br>
+        <h3 class="text-center mb-4">Student Registration</h3>
 
-Password:<br>
-<input type="password" name="password"><br><br>
+        <form method="post">
 
-Name:<br>
-<input type="text" name="name"><br><br>
+          <input class="form-control mb-3" type="text" name="username" placeholder="Username" required>
 
-Roll No:<br>
-<input type="text" name="roll_no"><br><br>
+          <input class="form-control mb-3" type="password" name="password" placeholder="Password" required>
 
-Department:<br>
-<input type="text" name="department"><br><br>
+          <input class="form-control mb-3" type="text" name="name" placeholder="Full Name" required>
 
-CGPA:<br>
-<input type="text" name="cgpa"><br><br>
+          <input class="form-control mb-3" type="text" name="roll_no" placeholder="Roll Number" required>
 
-Email:<br>
-<input type="text" name="email"><br><br>
+          <input class="form-control mb-3" type="text" name="department" placeholder="Department" required>
 
-<button type="submit">Register</button>
+          <input class="form-control mb-3" type="number" step="0.01" name="cgpa" placeholder="CGPA" required>
 
-</form>
+          <input class="form-control mb-3" type="email" name="email" placeholder="Email" required>
 
-</body>
-</html>
+          <button class="btn btn-success w-100">Register</button>
+
+        </form>
+
+        <div class="text-center mt-3">
+          <a href="/">Already have an account? Login</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

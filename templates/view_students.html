@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow">
+  <div class="card-body">
+
+    <h2 class="mb-4">Students</h2>
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Department</th>
+            <th>CGPA</th>
+            <th>Status</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+        {% if students %}
+          {% for s in students %}
+          <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+            <td>{{ s[4] }}</td>
+            <td>
+              {% if s[5] == 'Placed' %}
+                <span class="badge bg-success">Placed</span>
+              {% else %}
+                <span class="badge bg-danger">Not Placed</span>
+              {% endif %}
+            </td>
+
+            <td>
+              <a href="/delete_student/{{ s[0] }}"
+                 class="btn btn-danger btn-sm"
+                 onclick="return confirm('Delete this student?');">
+                 Delete
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+
+        {% else %}
+          <tr>
+            <td colspan="7" class="text-center">No students found</td>
+          </tr>
+        {% endif %}
+
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

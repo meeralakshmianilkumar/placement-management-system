@@ -2,13 +2,65 @@
 
 {% block content %}
 
-<h2>Student Dashboard</h2>
+<h2 class="mb-4">Student Dashboard</h2>
 
-<div class="list-group">
-  <a href="/drives" class="list-group-item list-group-item-action">View Placement Drives</a>
-  <a href="/applications" class="list-group-item list-group-item-action">View Applications</a>
-  <a href="/profile" class="list-group-item list-group-item-action">Update Profile</a>
-  <a href="/skills" class="list-group-item list-group-item-action">My Skills</a>
+<div class="row g-4">
+
+  <!-- Profile -->
+  <div class="col-md-4">
+    <div class="card stat-blue">
+      <div class="card-body text-center">
+        <h5>👤 Profile</h5>
+        <p>View and update your details</p>
+        <a href="/profile" class="btn btn-light btn-sm">Open</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="col-md-4">
+    <div class="card stat-green">
+      <div class="card-body text-center">
+        <h5>🛠 Skills</h5>
+        <p>Add and manage your skills</p>
+        <a href="/skills" class="btn btn-light btn-sm">Open</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drives -->
+  <div class="col-md-4">
+    <div class="card stat-orange">
+      <div class="card-body text-center">
+        <h5>📋 Drives</h5>
+        <p>View placement drives</p>
+        <a href="/drives" class="btn btn-light btn-sm">Open</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Applications -->
+  <div class="col-md-4">
+    <div class="card stat-red">
+      <div class="card-body text-center">
+        <h5>📄 Applications</h5>
+        <p>Track your applications</p>
+        <a href="/applications" class="btn btn-light btn-sm">Open</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report -->
+  <div class="col-md-4">
+    <div class="card stat-blue">
+      <div class="card-body text-center">
+        <h5>📊 Report</h5>
+        <p>View your full placement report</p>
+        <a href="/student/report" class="btn btn-light btn-sm">Open</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 {% endblock %}

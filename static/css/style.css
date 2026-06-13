@@ -1,23 +1,146 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color:#f4f6f9;
+/* ------------------ GLOBAL ------------------ */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #f8fafc);
+    color: #2c3e50;
 }
 
-h2{
-    color:#2c3e50;
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+    background: linear-gradient(90deg, #1e3c72, #2a5298) !important;
 }
 
-table{
-    border-collapse:collapse;
-    width:80%;
+.navbar-brand {
+    font-weight: bold;
+    font-size: 22px;
 }
 
-th,td{
-    padding:10px;
-    border:1px solid #ccc;
+/* ------------------ CARDS ------------------ */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
-th{
-    background-color:#3498db;
-    color:white;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
+
+/* ------------------ BUTTONS ------------------ */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------ TABLE ------------------ */
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: linear-gradient(90deg, #2a5298, #1e3c72);
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ------------------ BADGES ------------------ */
+.badge {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+
+/* ------------------ HEADINGS ------------------ */
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ------------------ FORM ------------------ */
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 2px rgba(42, 82, 152, 0.2);
+}
+
+/* ------------------ CONTAINER ------------------ */
+.container {
+    margin-top: 30px;
+}
+
+/* ------------------ CUSTOM STAT CARDS ------------------ */
+.stat-card {
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #f1f5f9;
+    transform: translateX(5px);
+}
+
+/* ------------------ PREMIUM TABLE ------------------ */
+.table {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Header */
+.table thead {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* Cells */
+.table th, .table td {
+    vertical-align: middle;
+    padding: 14px;
+}
+
+/* Hover effect */
+.table-hover tbody tr {
+    transition: 0.2s;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.01);
+}
+
+/* Rounded corners fix */
+.table thead tr th:first-child {
+    border-top-left-radius: 14px;
+}
+.table thead tr th:last-child {
+    border-top-right-radius: 14px;
+}
+
+.stat-blue { background: linear-gradient(135deg, #36d1dc, #5b86e5); }
+.stat-green { background: linear-gradient(135deg, #00b09b, #96c93d); }
+.stat-orange { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.stat-red { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
